@@ -22,3 +22,16 @@ FROM events
     WHERE timestamp >= ‘2019-01-01’
 GROUP BY 1
 ```
+
+
+###MS SQL
+```
+with cte as 
+    (select 
+        app_id, 
+        CAST(SUM(case when event_id='click' then 1 end) AS decimal(4,2)) as click,
+        count(event_id) as total
+    from events
+    group by app_id)
+select app_id, round((click/total),2) as click_through_rate from cte;
+```

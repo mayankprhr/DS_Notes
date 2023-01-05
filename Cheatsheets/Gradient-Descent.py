@@ -20,5 +20,7 @@ for i in range(epoch):
 print("The local minimum occurs at %f" % current_x)
 
 """
-The trick is the learning_rate. By going in the opposite direction of the slope, it approaches the minimum. Additionally, the closer it gets to the minimum, the smaller the slope gets. This reduces each step as the slope approaches 0.
+The trick is the learning_rate. By going in the opposite direction of the slope, it approaches the minimum. Additionally, the closer it gets to the minimum, the smaller the slope gets. 
+This reduces each step as the slope approaches 0.
 """
+
